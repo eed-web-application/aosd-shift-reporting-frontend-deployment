@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aosd-shift-reporting-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aosd-shift-reporting-frontend
+  template:
+    metadata:
+      labels:
+        app: aosd-shift-reporting-frontend
+    spec:
+      containers:
+        - name: aosd-shift-reporting-frontend
+          image: <image-name>
+          resources:
+            limits:
+              memory: 512Mi
+              cpu: "250m"
+          ports:
+            - containerPort: 8080
+      imagePullSecrets:
+        - name: gh-secret
