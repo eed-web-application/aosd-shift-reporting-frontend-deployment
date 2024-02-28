@@ -29,7 +29,7 @@ jobs:
 
       - name: Add docker metadata
         id: meta
-        uses: docker/metadata-action@v4
+        uses: docker/metadata-action@v5
         with:
           images: ${{env.REGISTRY }}/${{ env.IMAGE_NAME }}
           # Generate Docker tags based on the following attributes
@@ -39,7 +39,7 @@ jobs:
             maintainer=boogie@slac.stanford.edu
 
       - name: Build and push
-        uses: docker/build-push-action@v4
+        uses: docker/build-push-action@v5
         with:
           context: .
           platforms: |
