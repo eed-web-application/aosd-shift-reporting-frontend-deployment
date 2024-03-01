@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: aosd-shift-reporting-frontend
-          image: ghcr.io/eed-web-application/aosd-shift-reporting-frontend:sha-bbcf085
+          image: ghcr.io/eed-web-application/aosd-shift-reporting-frontend:sha-f846c1e
           resources:
             limits:
               memory: 512Mi
